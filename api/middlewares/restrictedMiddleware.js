@@ -11,6 +11,7 @@ function restricted(req, res, next) {
         res.status(401).json({ errorMessage: "Unauthorized" });
       } else {
         req.user = decodedToken;
+
         next();
       }
     });

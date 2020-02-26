@@ -4,6 +4,11 @@ function get() {
   return db("users");
 }
 
+function getByDep(dep) {
+  return db("users").where({ department: dep });
+}
+
 module.exports = {
-  get
+  get,
+  getByDep
 };
