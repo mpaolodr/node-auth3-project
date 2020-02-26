@@ -11,6 +11,13 @@ function add(user) {
     });
 }
 
+function findBy(filter) {
+  return db("users")
+    .where(filter)
+    .first();
+}
+
 module.exports = {
-  add
+  add,
+  findBy
 };
